@@ -1,0 +1,57 @@
+{
+  "expo": {
+    "name": "yonderwonderai",
+    "slug": "yonderwonderai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.ankitrai555.yonderwonder.ai",
+      "googleServicesFile": "./google-services.json",
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow yonderwonder.ai to access your camera",
+          "microphonePermission": "Allow yonderwonder.ai to access your microphone"
+        }
+      ],
+      "expo-router",
+      "@react-native-firebase/app",
+      "@react-native-google-signin/google-signin",
+      "expo-video"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "e10d34db-8f87-4bf3-a8af-0148a271eb61"
+      }
+    },
+    "owner": "ankitrai555"
+  }
+}
