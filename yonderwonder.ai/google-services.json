@@ -12,7 +12,20 @@
           "package_name": "com.ankitrai555.yonderwonder.ai"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "777230895589-qvmqniqvvp6q54hkib3e46l5vb9r23ed.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ankitrai555.yonderwonder.ai",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "777230895589-ceku3uhscgelacfo9l06pk3ii5jo04mm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyA-Q856kWFR07YZN0nb_380Zf43DW-tnX4"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "777230895589-ceku3uhscgelacfo9l06pk3ii5jo04mm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

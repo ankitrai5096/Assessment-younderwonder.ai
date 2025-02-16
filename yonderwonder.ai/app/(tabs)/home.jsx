@@ -35,6 +35,8 @@ export default function HomeScreen() {
       const photoData = await cameraRef.current.takePictureAsync();
       setPhoto(photoData.uri);
       setVideo(null);
+
+      router.push(`/Editor/ImageEditor?imageUri=${encodeURIComponent(photoData.uri)}`);
     }
   }
 
@@ -71,10 +73,16 @@ export default function HomeScreen() {
   return (
     <View style={styles.container}>
       {!showCamera ? (
+        <View style={{alignItems:'center'}}>
         <TouchableOpacity style={styles.captureButton} onPress={() => setShowCamera(true)}>
-          <Ionicons name="camera" size={50} color="black" />
+          <Ionicons name="camera" size={30} color="white" />
           <Text style={styles.captureText}>Capture</Text>
         </TouchableOpacity>
+         <TouchableOpacity style={styles.captureButton} onPress={() => router.push('/UrlEditor/MainUrlScreen')}>
+         <Ionicons name="link" size={30} color="white" />
+         <Text style={styles.captureText}>Paste a link </Text>
+       </TouchableOpacity>
+       </View>
       ) : photo || video ? (
         <View style={styles.previewContainer}>
           <TouchableOpacity style={styles.backButton} onPress={handleBack}>
@@ -119,12 +127,21 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
   },
   captureButton: {
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#007bff",
+    borderWidth: 1,
+    borderColor: "#ddd",
+    borderRadius: 10,
+    paddingHorizontal: 20,
+    paddingVertical:5,
+    width: "100%",
+    marginBottom: 20,
+    gap: 5,
   },
   captureText: {
     fontSize: 18,
-    marginTop: 10,
-    color: 'black',
+    color: 'white',
   },
   previewContainer: {
     flex: 1,
